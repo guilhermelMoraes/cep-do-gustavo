@@ -8,16 +8,52 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body class="bg-light d-flex justify-content-center align-items-center">
-    <div id="cep-gustavo" class="border bg-primary-subtle p-2">
+    <div id="cep-gustavo" class="border bg-primary-subtle p-2 rounded">
         <h1 class="text-center mb-4">CEP DO GUSTAVO - VANILLA</h1>
-        <form class="input-group input-group-lg">
-            <div class="form-floating">
-                <input type="text" class="form-control" id="cep-input" placeholder="Digite seu CEP">
-                <label for="cep-input">Digite seu CEP</label>
+        <form >
+            <div class="input-group input-group-lg mb-3">
+                <div class="form-floating">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="cep-input"
+                        placeholder="Digite seu CEP"
+                        maxlength="8"
+                        pattern="^[0-9]*$"
+                    />
+                    <label for="cep-input">Digite seu CEP</label>
+                </div>
+                <button
+                    id="submit-button"
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Procurar
+                </button>
             </div>
-            <button type="button" class="btn btn-primary">Procurar</button>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="endereco" placeholder="Endereço" disabled>
+                <label for="endereco">Endereço</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="bairro" placeholder="Bairro" disabled>
+                <label for="bairro">Bairro</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="cidade" placeholder="Cidade" disabled>
+                <label for="cidade">Cidade</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="estado" placeholder="Estado" disabled>
+                <label for="estado">Estado</label>
+            </div>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
