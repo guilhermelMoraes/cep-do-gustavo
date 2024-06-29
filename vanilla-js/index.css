@@ -5,3 +5,7 @@ body {
 #cep-gustavo {
   width: 40%;
 }
+
+.displayNone {
+  display: none;
+}
